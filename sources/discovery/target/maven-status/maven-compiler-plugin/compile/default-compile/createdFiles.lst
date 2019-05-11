@@ -1,3 +1,4 @@
-com/ipleiria/mcs/datacollector/discovery/Activator$1.class
-com/ipleiria/mcs/datacollector/discovery/Activator$2.class
+com/ipleiria/mcs/datacollector/discovery/OldActivator$1.class
+com/ipleiria/mcs/datacollector/discovery/OldActivator$2.class
 com/ipleiria/mcs/datacollector/discovery/Activator.class
+com/ipleiria/mcs/datacollector/discovery/OldActivator.class

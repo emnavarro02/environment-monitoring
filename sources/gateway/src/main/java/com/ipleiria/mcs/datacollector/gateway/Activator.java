@@ -111,7 +111,7 @@ public class Activator implements BundleActivator
 			System.err.println(e.getMessage());
 		}
 		
-		System.out.println("Goodbye");
+		System.out.println("Stopping Gateway");
 	}
 	
 	private List<BluetoothDevice> getBluetoothDevices() throws Exception {

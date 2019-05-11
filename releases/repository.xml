@@ -1,24 +1,4 @@
-<repository lastmodified='20190511123813.443'>
-  <resource id='com.ipleiria.mcs.datacollector.discovery/0.0.1' symbolicname='com.ipleiria.mcs.datacollector.discovery' presentationname='Environment Data Collector' uri='file:/home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases/com/ipleiria/mcs/datacollector/com.ipleiria.mcs.datacollector.discovery/0.0.1/com.ipleiria.mcs.datacollector.discovery-0.0.1.jar' version='0.0.1'>
-    <description>Collects environment data through BLE</description>
-    <size>12305</size>
-    <category id='IOT'/>
-    <capability name='bundle'>
-      <p n='symbolicname' v='com.ipleiria.mcs.datacollector.discovery'/>
-      <p n='presentationname' v='Environment Data Collector'/>
-      <p n='version' t='version' v='0.0.1'/>
-      <p n='manifestversion' v='2'/>
-    </capability>
-    <capability name='package'>
-      <p n='package' v='com.ipleiria.mcs.datacollector.discovery'/>
-      <p n='version' t='version' v='0.0.1'/>
-      <p n='uses:' v='org.osgi.framework,org.osgi.service.event'/>
-    </capability>
-    <require name='package' filter='(&amp;(package=org.json)(version&gt;=20180813.0.0)(!(version&gt;=20180814.0.0)))' extend='false' multiple='false' optional='false'>Import package org.json;version="[20180813.0,20180814)"</require>
-    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version="[1.5,2)"</require>
-    <require name='package' filter='(&amp;(package=org.osgi.service.event)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.event;version="[1.4,2)"</require>
-    <require name='package' filter='(&amp;(package=tinyb))' extend='false' multiple='false' optional='false'>Import package tinyb</require>
-  </resource>
+<repository lastmodified='20190511054844.244'>
   <resource id='bridge-server/0.0.1' symbolicname='bridge-server' presentationname='Environment Data Collector - Bridge Server' uri='file:/home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases/com/ipleiria/mcs/datacollector/bridge-server/0.0.1/bridge-server-0.0.1.jar' version='0.0.1'>
     <description>Environment Data Collector - Bridge Server</description>
     <size>6595</size>
@@ -74,9 +54,29 @@
     <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version="[1.5,2)"</require>
     <require name='package' filter='(&amp;(package=org.osgi.service.event)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.event;version="[1.4,2)"</require>
   </resource>
+  <resource id='com.ipleiria.mcs.datacollector.discovery/0.0.1' symbolicname='com.ipleiria.mcs.datacollector.discovery' presentationname='MCS-DataCollector' uri='file:/home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases/com/ipleiria/mcs/datacollector/com.ipleiria.mcs.datacollector.discovery/0.0.1/com.ipleiria.mcs.datacollector.discovery-0.0.1.jar' version='0.0.1'>
+    <description>Collects environment data through BLE</description>
+    <size>16259</size>
+    <category id='IOT'/>
+    <capability name='bundle'>
+      <p n='symbolicname' v='com.ipleiria.mcs.datacollector.discovery'/>
+      <p n='presentationname' v='MCS-DataCollector'/>
+      <p n='version' t='version' v='0.0.1'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.ipleiria.mcs.datacollector.discovery'/>
+      <p n='version' t='version' v='0.0.1'/>
+      <p n='uses:' v='org.osgi.framework,org.osgi.service.event'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=org.json)(version&gt;=20180813.0.0)(!(version&gt;=20180814.0.0)))' extend='false' multiple='false' optional='false'>Import package org.json;version="[20180813.0,20180814)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version="[1.5,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.event)(version&gt;=1.4.0)(!(version&gt;=1.5.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.event;version="[1.4,1.5)"</require>
+    <require name='package' filter='(&amp;(package=tinyb))' extend='false' multiple='false' optional='false'>Import package tinyb</require>
+  </resource>
   <resource id='gateway/0.0.1' symbolicname='gateway' presentationname='MCS-Gateway' uri='file:/home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases/com/ipleiria/mcs/datacollector/gateway/0.0.1/gateway-0.0.1.jar' version='0.0.1'>
     <description>Collects environment data through BLE</description>
-    <size>7506</size>
+    <size>7561</size>
     <category id='IOT'/>
     <capability name='bundle'>
       <p n='symbolicname' v='gateway'/>

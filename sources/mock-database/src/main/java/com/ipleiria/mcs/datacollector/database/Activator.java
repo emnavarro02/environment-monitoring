@@ -11,9 +11,12 @@ import org.osgi.service.event.EventConstants;
 import org.osgi.service.event.EventHandler;
 
 /**
- * Hello world!
- *
- */
+ * This bundle is the Database interface on the project. 
+ * 
+ * It listens to posts in one EventAdmin topic and Handle these events
+ * (in this case, it just prints the events)  
+ * 
+ * */
 public class Activator implements BundleActivator, EventHandler {
 
 	private static final String TOPIC_BASE = "com/ipleiria/datacollector/discovery/";

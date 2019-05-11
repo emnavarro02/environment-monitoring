@@ -7,7 +7,7 @@
   <version>0.0.1</version>
   <packaging>bundle</packaging>
 
-  <name>Environment Data Collector</name>
+  <name>MCS-DataCollector</name>
   <description>Collects environment data through BLE</description>
 
   <properties>
@@ -43,6 +43,7 @@
 		</plugin>
   	</plugins>
   </build>
+  
   
   <distributionManagement>
   	<!-- releases repo -->
