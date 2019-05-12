@@ -1,6 +1,5 @@
 package com.ipleiria.mcs.datacollector.gateway;
 
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +33,7 @@ public class Activator implements BundleActivator
 	
 	public void start(BundleContext context) throws Exception, BluetoothException {
 		
-		System.out.println("Starting Gateway");
+		System.out.println("Gateway started");
 		
 		running = true;
 		
@@ -43,8 +42,8 @@ public class Activator implements BundleActivator
 				do {
 					try {
 						BluetoothManager manager = BluetoothManager.getBluetoothManager();
-						boolean discoveryStarted = manager.startDiscovery();
-				        System.out.println("The discovery started: " + (discoveryStarted ? "true" : "false"));
+						// boolean discoveryStarted = manager.startDiscovery();
+				        // System.out.println("Discovery started: " + (discoveryStarted ? "true" : "false"));
 				        
 				        List<BluetoothDevice> list = getBluetoothDevices();
 				 
@@ -111,7 +110,7 @@ public class Activator implements BundleActivator
 			System.err.println(e.getMessage());
 		}
 		
-		System.out.println("Stopping Gateway");
+		System.out.println("Gateway stopped");
 	}
 	
 	private List<BluetoothDevice> getBluetoothDevices() throws Exception {

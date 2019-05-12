@@ -82,10 +82,5 @@
 			<artifactId>org.osgi.service.event</artifactId>
 			<version>1.4.0</version>
 		</dependency>
-		<dependency>
-			<groupId>tinyb</groupId>
-			<artifactId>tinyb</artifactId>
-			<version>0.5.1</version>
-		</dependency>
 	</dependencies>	
 </project>

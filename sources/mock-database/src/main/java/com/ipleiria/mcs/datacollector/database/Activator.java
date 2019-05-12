@@ -24,14 +24,14 @@ public class Activator implements BundleActivator, EventHandler {
 	
 	@Override
 	public void start(BundleContext context) throws Exception {
-		System.out.println("starting database bundle...");
+		System.out.println("Database started");
 		startListender(context);
 	}
 
 	@Override
 	public void stop(BundleContext context) throws Exception {
 		stopListener(context);
-		System.out.println("stopping database bundle...");
+		System.out.println("Database stopped");
 	}
 
 	private void startListender(BundleContext context) {
@@ -46,11 +46,11 @@ public class Activator implements BundleActivator, EventHandler {
 
 	@Override
 	public void handleEvent(Event event) {
-		System.out.println("\n[Database] New event: ");
+		System.out.println("\n[Database] New event has arrived: ");
 		System.out.println("   Topic: " + event.getTopic());
 		for (String s : event.getPropertyNames()) {
-			System.out.println("   PropertyName: " + s);
-			System.out.println("      Property: " + event.getProperty(s));
+			System.out.println("  PropertyName: " + s);
+			System.out.println("    Property: " + event.getProperty(s));
 		}		
 	}
 

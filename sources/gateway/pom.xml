@@ -3,13 +3,16 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.ipleiria.mcs.datacollector</groupId>
-  <artifactId>gateway</artifactId>
+  <artifactId>com.ipleiria.mcs.datacollector.gateway</artifactId>
   <version>0.0.1</version>
   <packaging>bundle</packaging>
 
   <name>MCS-Gateway</name>
   <description>Collects environment data through BLE</description>
 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
   <build>
   	<plugins>
@@ -58,24 +61,11 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.json/json -->
-		<dependency>
-		    <groupId>org.json</groupId>
-		    <artifactId>json</artifactId>
-		    <version>20180813</version>
-		</dependency>
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.core</artifactId>
 			<version>4.2.0</version>
 		</dependency>
-		<!-- 
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.service.component.annotations</artifactId>
-			<version>1.4.0</version>
-		</dependency>
-		-->
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.service.event</artifactId>

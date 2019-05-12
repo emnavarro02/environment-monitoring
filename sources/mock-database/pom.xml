@@ -7,7 +7,7 @@
   <version>0.0.1</version>
   <packaging>bundle</packaging>
 
-  <name>Environment Data Collector - Fake Database</name>
+  <name>MCS-Database</name>
   <description>Emulate the database behaviour for the Environment Data Collector System</description>
 
   <properties>
