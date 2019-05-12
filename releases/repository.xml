@@ -1,4 +1,22 @@
-<repository lastmodified='20190512085114.036'>
+<repository lastmodified='20190512110951.201'>
+  <resource id='com.ipleiria.mcs.datacollector.bridge-server/0.0.1' symbolicname='com.ipleiria.mcs.datacollector.bridge-server' presentationname='MCS-BridgeServer' uri='file:/home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases/com/ipleiria/mcs/datacollector/com.ipleiria.mcs.datacollector.bridge-server/0.0.1/com.ipleiria.mcs.datacollector.bridge-server-0.0.1.jar' version='0.0.1'>
+    <description>Environment Data Collector - Bridge Server</description>
+    <size>8988</size>
+    <category id='IOT'/>
+    <capability name='bundle'>
+      <p n='symbolicname' v='com.ipleiria.mcs.datacollector.bridge-server'/>
+      <p n='presentationname' v='MCS-BridgeServer'/>
+      <p n='version' t='version' v='0.0.1'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.ipleiria.mcs.datacollector.bridge.server'/>
+      <p n='version' t='version' v='0.0.1'/>
+      <p n='uses:' v='org.osgi.framework'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version="[1.5,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.event)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.event;version="[1.4,2)"</require>
+  </resource>
   <resource id='com.ipleiria.mcs.datacollector.database/0.0.1' symbolicname='com.ipleiria.mcs.datacollector.database' presentationname='MCS-Database' uri='file:/home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases/com/ipleiria/mcs/datacollector/com.ipleiria.mcs.datacollector.database/0.0.1/com.ipleiria.mcs.datacollector.database-0.0.1.jar' version='0.0.1'>
     <description>Emulate the database behaviour for the Environment Data Collector System</description>
     <size>5051</size>
@@ -19,7 +37,7 @@
   </resource>
   <resource id='com.ipleiria.mcs.datacollector.discovery/0.0.1' symbolicname='com.ipleiria.mcs.datacollector.discovery' presentationname='MCS-DataCollector' uri='file:/home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases/com/ipleiria/mcs/datacollector/com.ipleiria.mcs.datacollector.discovery/0.0.1/com.ipleiria.mcs.datacollector.discovery-0.0.1.jar' version='0.0.1'>
     <description>Collects environment data through BLE</description>
-    <size>7835</size>
+    <size>7797</size>
     <category id='IOT'/>
     <capability name='bundle'>
       <p n='symbolicname' v='com.ipleiria.mcs.datacollector.discovery'/>

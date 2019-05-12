@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.ipleiria.mcs.datacollector</groupId>
-  <artifactId>bridge-server</artifactId>
+  <artifactId>com.ipleiria.mcs.datacollector.bridge-server</artifactId>
   <version>0.0.1</version>
   <packaging>bundle</packaging>
 
-  <name>Environment Data Collector - Bridge Server</name>
+  <name>MCS-BridgeServer</name>
   <description>Environment Data Collector - Bridge Server</description>
 
   <properties>
@@ -26,7 +26,7 @@
   					<Bundle-Category>IOT</Bundle-Category>
   					<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
   					<Export-Package>com.ipleiria.mcs.datacollector.bridge.server</Export-Package>
-  					<Bundle-Activator>com.ipleiria.mcs.datacollector.bridge.server.BridgeServer</Bundle-Activator>
+  					<Bundle-Activator>com.ipleiria.mcs.datacollector.bridge.server.Activator</Bundle-Activator>
   				</instructions>
   			<remoteOBR>repo-rel</remoteOBR>
   			<prefixUrl>file:///home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases</prefixUrl>

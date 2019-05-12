@@ -184,8 +184,8 @@ public class Activator implements BundleActivator, EventHandler {
 		String location = "";
 		for (Map<String,String> element : sensors) {
 			if(element.containsValue(id)) {
-				System.out.println("element contains value.");
-				System.out.println(element.get(KEY_LOCATION).toString());
+				// System.out.println("element contains value.");
+				// System.out.println(element.get(KEY_LOCATION).toString());
 				location = element.get(KEY_LOCATION);
 			}
 		}

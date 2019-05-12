@@ -1,1 +1,4 @@
-com/ipleiria/mcs/datacollector/bridge/server/BridgeServer.class
+com/ipleiria/mcs/datacollector/bridge/server/ClientServiceThread.class
+com/ipleiria/mcs/datacollector/bridge/server/Activator.class
+com/ipleiria/mcs/datacollector/bridge/server/EchoServer$1.class
+com/ipleiria/mcs/datacollector/bridge/server/EchoServer.class
