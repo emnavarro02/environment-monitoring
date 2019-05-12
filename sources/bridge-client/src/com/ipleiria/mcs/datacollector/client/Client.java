@@ -1,4 +1,4 @@
-package com.emerson.java.socket.client;
+package com.ipleiria.mcs.datacollector.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
