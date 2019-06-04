@@ -30,10 +30,11 @@ public class Activator implements BundleActivator, EventHandler {
 	private static final String KEY_HEIGHT = "height";
 	private static final String KEY_BATTERY = "battery";
 	
-	private static final String TOPIC_BASE                = "com/ipleiria/datacollector/discovery/";
-	private static final String TOPIC_TEMPERATURE_HUMDITY = TOPIC_BASE + "TempHum";
-	private static final String TOPIC_BROADCASTED_DATA    = TOPIC_BASE + "RawData";
-//	private static final String TOPIC_NEW_SENSORS         = TOPIC_BASE + "sensors";	
+	//  private static final String TOPIC_BASE = "com/ipleiria/datacollector/discovery/";
+	private static final String TOPIC_TEMPERATURE_HUMDITY = "TempHum";
+	private static final String TOPIC_BROADCASTED_DATA = "ble";
+	//	private static final String TOPIC_BROADCASTED_DATA = TOPIC_BASE + "RawData";
+	//	private static final String TOPIC_NEW_SENSORS = TOPIC_BASE + "sensors";	
 	
 	private static final String JSON_FILE = "sensors.json";
 	private List<Map<String,String>> sensors;
@@ -52,7 +53,7 @@ public class Activator implements BundleActivator, EventHandler {
 		
 		Dictionary<String, String> properties = new Hashtable<String, String>();
 		properties.put(EventConstants.EVENT_TOPIC, TOPIC_BROADCASTED_DATA);
-		System.out.println("Properties: " + properties);
+		System.out.println("Subscribed to the 	topic: " + properties);
 		
 		context.registerService(EventHandler.class.getName(), this, properties);
 		

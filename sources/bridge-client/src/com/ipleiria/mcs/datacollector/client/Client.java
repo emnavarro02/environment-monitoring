@@ -1,8 +1,6 @@
 package com.ipleiria.mcs.datacollector.client;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.HashMap;
@@ -15,41 +13,56 @@ import tinyb.BluetoothDevice;
 import tinyb.BluetoothException;
 import tinyb.BluetoothManager;
 
-
 public class Client
 {
-
-	public static void main(String[] args) throws IOException
+	public static boolean done = false;
+	
+	public static void main(String[] args) throws IOException, InterruptedException, NumberFormatException
 	{
 		Scanner consoleIn = new Scanner(System.in);
 
-		System.out.print("Address: ");
+		System.out.print("Server IP address (Enter to default [localhost]): ");
 		String address = consoleIn.nextLine();
 		if (address.isEmpty()) {
 			address = "localhost";
 		}
 		
-		System.out.print("Port: ");
-		int port = Integer.parseInt(consoleIn.nextLine());
-		if (port < 0) {
+		System.out.println(address);
+		
+		System.out.print("Port number (Enter to default [4444]): ");
+		
+		int port = 4444; 
+	 	String portNumber = consoleIn.nextLine();
+	 	
+	 	if(portNumber.isEmpty()) 
+		{
 			port = 4444;
 		}
-	 
+	 	else
+	 	{ 
+	 		try 
+	 		{
+	 			port = Integer.parseInt(portNumber);
+	 		}
+	 		catch (NumberFormatException e)
+	 		{
+	 			System.err.println("Port number invalid. Attempting to connect with default [4444].\n");
+	 		}
+	 	}
+		
 		System.out.println("Connecting");
 		Socket socket = new Socket(address, port);
 		System.out.println("Connected to port " + port + " at " + address);
 		
 		ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
-		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		
 		
 		System.out.println("Input and output streams established");
-		
-		
-		boolean done = false;
-		do
+	
+    	do
 		{
 			try 
-			{
+			{	
 				BluetoothManager manager = BluetoothManager.getBluetoothManager();
 		        
 		        List<BluetoothDevice> list = getBluetoothDevices();
@@ -102,6 +115,7 @@ public class Client
 		} while (!done);
 		
 		System.out.println("Closing connection");
+		consoleIn.close();
 		socket.close();
 	}
 	
@@ -114,7 +128,7 @@ public class Client
         	// Get bluetooth devices that are broadcasting
             list = manager.getDevices();
             
-            Thread.sleep(4000);
+            Thread.sleep(1000);
         }
         
         //TODO: LOG	

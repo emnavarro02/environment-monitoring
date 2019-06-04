@@ -8,6 +8,8 @@ public class EchoServer {
 	ServerSocket m_ServerSocket;
 	private volatile boolean started;
 	
+	int port = 9876;
+	
 	public void start() {
 		
 		new Thread(new Runnable() {
@@ -17,12 +19,12 @@ public class EchoServer {
 				started = true;
 				
 				try {
-					m_ServerSocket = new ServerSocket(4444);
+					m_ServerSocket = new ServerSocket(port);
 				} catch (IOException e) {
-					System.out.println("Could not create a server socket at 4444. Exiting...");
+					System.out.println("Could not create a server socket at " + port + ". Exiting...");
 					System.exit(-1);
 				}
-				System.out.println("Listening for clients on 4444");
+				System.out.println("Listening for clients on " + port + ".");
 				int id = 0;
 				
 				while (started) {
@@ -31,9 +33,10 @@ public class EchoServer {
 						Socket clientSocket = m_ServerSocket.accept();
 						ClientServiceThread cliThread = new ClientServiceThread(clientSocket, id);
 						cliThread.start();
+
 					} catch (IOException ioe) {
-						System.out.println("\"Exception encountered on accept. Ignoring. Stack Trace: ");
-						ioe.printStackTrace();
+						System.out.println("\"Client has been disconnected. Ignoring...");
+						// ioe.printStackTrace();
 					}
 				}
 				
@@ -43,12 +46,13 @@ public class EchoServer {
 	
 	public void stop() {
 		try {
-
-			m_ServerSocket.close();
 			started = false;
+			m_ServerSocket.close();
+			
 		} catch (IOException e) {
-			System.out.println("Something went wrong while closing connections. Stack Trace: ");
-			e.printStackTrace();
+			System.out.println("Something went wrong while closing connections: ");
+			System.out.println(e.getMessage());
+			// e.printStackTrace();
 		}
 		
 		

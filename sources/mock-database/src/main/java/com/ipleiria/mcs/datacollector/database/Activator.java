@@ -19,13 +19,15 @@ import org.osgi.service.event.EventHandler;
  * */
 public class Activator implements BundleActivator, EventHandler {
 
-	private static final String TOPIC_BASE = "com/ipleiria/datacollector/discovery/";
-	private static final String TOPIC_TEMPERATURE_HUMDITY = TOPIC_BASE + "TempHum";
+	//private static final String TOPIC_BASE = "com/ipleiria/datacollector/discovery/";
+	// private static final String TOPIC_TEMPERATURE_HUMDITY = TOPIC_BASE + "TempHum";	
+	private static final String TOPIC_TEMPERATURE_HUMDITY = "TempHum";
 	
 	@Override
 	public void start(BundleContext context) throws Exception {
+		
 		System.out.println("Database started");
-		startListender(context);
+		startListener(context);
 	}
 
 	@Override
@@ -34,7 +36,7 @@ public class Activator implements BundleActivator, EventHandler {
 		System.out.println("Database stopped");
 	}
 
-	private void startListender(BundleContext context) {
+	private void startListener(BundleContext context) {
 		Dictionary<String,String> props = new Hashtable<String, String>();
 		props.put(EventConstants.EVENT_TOPIC, TOPIC_TEMPERATURE_HUMDITY);
 		context.registerService(EventHandler.class.getName(), this, props);

@@ -1,7 +1,7 @@
-<repository lastmodified='20190512110951.201'>
+<repository lastmodified='20190603025025.603'>
   <resource id='com.ipleiria.mcs.datacollector.bridge-server/0.0.1' symbolicname='com.ipleiria.mcs.datacollector.bridge-server' presentationname='MCS-BridgeServer' uri='file:/home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases/com/ipleiria/mcs/datacollector/com.ipleiria.mcs.datacollector.bridge-server/0.0.1/com.ipleiria.mcs.datacollector.bridge-server-0.0.1.jar' version='0.0.1'>
     <description>Environment Data Collector - Bridge Server</description>
-    <size>8988</size>
+    <size>9116</size>
     <category id='IOT'/>
     <capability name='bundle'>
       <p n='symbolicname' v='com.ipleiria.mcs.datacollector.bridge-server'/>
@@ -19,7 +19,7 @@
   </resource>
   <resource id='com.ipleiria.mcs.datacollector.database/0.0.1' symbolicname='com.ipleiria.mcs.datacollector.database' presentationname='MCS-Database' uri='file:/home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases/com/ipleiria/mcs/datacollector/com.ipleiria.mcs.datacollector.database/0.0.1/com.ipleiria.mcs.datacollector.database-0.0.1.jar' version='0.0.1'>
     <description>Emulate the database behaviour for the Environment Data Collector System</description>
-    <size>5051</size>
+    <size>5114</size>
     <category id='IOT'/>
     <capability name='bundle'>
       <p n='symbolicname' v='com.ipleiria.mcs.datacollector.database'/>
@@ -37,7 +37,7 @@
   </resource>
   <resource id='com.ipleiria.mcs.datacollector.discovery/0.0.1' symbolicname='com.ipleiria.mcs.datacollector.discovery' presentationname='MCS-DataCollector' uri='file:/home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases/com/ipleiria/mcs/datacollector/com.ipleiria.mcs.datacollector.discovery/0.0.1/com.ipleiria.mcs.datacollector.discovery-0.0.1.jar' version='0.0.1'>
     <description>Collects environment data through BLE</description>
-    <size>7797</size>
+    <size>7774</size>
     <category id='IOT'/>
     <capability name='bundle'>
       <p n='symbolicname' v='com.ipleiria.mcs.datacollector.discovery'/>
@@ -56,7 +56,7 @@
   </resource>
   <resource id='com.ipleiria.mcs.datacollector.gateway/0.0.1' symbolicname='com.ipleiria.mcs.datacollector.gateway' presentationname='MCS-Gateway' uri='file:/home/emerson/Projects/mei-cm/mcs/environment-monitoring/releases/com/ipleiria/mcs/datacollector/com.ipleiria.mcs.datacollector.gateway/0.0.1/com.ipleiria.mcs.datacollector.gateway-0.0.1.jar' version='0.0.1'>
     <description>Collects environment data through BLE</description>
-    <size>7481</size>
+    <size>7491</size>
     <category id='IOT'/>
     <capability name='bundle'>
       <p n='symbolicname' v='com.ipleiria.mcs.datacollector.gateway'/>

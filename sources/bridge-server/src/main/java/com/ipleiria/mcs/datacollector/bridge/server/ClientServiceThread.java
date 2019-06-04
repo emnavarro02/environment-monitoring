@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.net.Socket;
-import java.util.HashMap;
 import java.util.Map;
 
 import org.osgi.framework.Bundle;
@@ -18,8 +17,8 @@ import org.osgi.service.event.EventAdmin;
 class ClientServiceThread extends Thread
 {
 	
-	private static final String TOPIC_BASE = "com/ipleiria/datacollector/discovery/";
-	private static final String TOPIC_BROADCASTED_DATA = TOPIC_BASE + "RawData";
+	// private static final String TOPIC_BASE = "com/ipleiria/datacollector/discovery/";
+	private static final String TOPIC_BROADCASTED_DATA = "BTRawData";
 	
     Socket m_clientSocket;        
     int m_clientID = -1;
@@ -34,13 +33,8 @@ class ClientServiceThread extends Thread
     public void run()
     {            
         // Obtain the input stream and the output stream for the socket
-        // A good practice is to encapsulate them with a BufferedReader
-        // and a PrintWriter as shown below.
         BufferedReader in = null; 
         
-        
-        // PrintWriter out = null;
-
         // Print out details of this connection
         System.out.println("Accepted Client : ID - " + m_clientID + " : Address - " + 
                          m_clientSocket.getInetAddress().getHostName());
@@ -53,12 +47,12 @@ class ClientServiceThread extends Thread
             // At this point, we can read for input and reply with appropriate output.
             // Run in a loop until m_bRunThread is set to false
             while(m_bRunThread)
-            {                    
+            {            
+            	@SuppressWarnings("unchecked")
+            	Map<String,Object> message  = (Map<String, Object>) objectInputStream.readObject();
             	
-            
-            	Map<String,Object> message  = new HashMap<String, Object>();
-            	message = (Map<String, Object>) objectInputStream.readObject();
-                
+            	System.out.println("Client says: " + message );
+            	
             	//TODO: Create a stop condition based on the message sent by the client
                 if(message == null)
                 {
@@ -74,7 +68,7 @@ class ClientServiceThread extends Thread
         }
         catch(Exception e)
         {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         finally
         {
@@ -86,9 +80,10 @@ class ClientServiceThread extends Thread
                 m_clientSocket.close();
                 System.out.println("...Stopped");
             }
-            catch(IOException ioe)
+            catch(IOException e)
             {
-                ioe.printStackTrace();
+                System.out.println("Attempting to stop bridge server.");
+                System.out.println(e.getMessage());
             }
         }
     }

@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1557698990445
-Build-Jdk: 1.8.0_191
+Bnd-LastModified: 1559569824662
+Build-Jdk: 1.8.0_212
 Built-By: emerson
 Bundle-Activator: com.ipleiria.mcs.datacollector.bridge.server.Activator
 Bundle-Category: IOT

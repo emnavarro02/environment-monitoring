@@ -25,8 +25,9 @@ import tinyb.BluetoothManager;
 public class Activator implements BundleActivator
 {
 
-	private static final String TOPIC_BASE = "com/ipleiria/datacollector/discovery/";
-	private static final String TOPIC_BROADCASTED_DATA = TOPIC_BASE + "RawData";
+	// private static final String TOPIC_BASE = "com/ipleiria/datacollector/discovery/";
+	// private static final String TOPIC_BROADCASTED_DATA = TOPIC_BASE + "RawData";
+	private static final String TOPIC_BROADCASTED_DATA = "ble";
 	
 	boolean running;
 	Thread thread;
@@ -41,6 +42,7 @@ public class Activator implements BundleActivator
 			public void run() {
 				do {
 					try {
+						System.out.println("Looking for Bluetooth devices...");
 						BluetoothManager manager = BluetoothManager.getBluetoothManager();
 						// boolean discoveryStarted = manager.startDiscovery();
 				        // System.out.println("Discovery started: " + (discoveryStarted ? "true" : "false"));
